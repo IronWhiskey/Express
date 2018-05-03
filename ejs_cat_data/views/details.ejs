@@ -1,0 +1,71 @@
+<html>
+    <head>
+
+    </head>
+
+    <body>
+
+        <% if (cat[0] && cat[0].name == 'undefined') { %>
+                
+            <h1>Big cats of Africa</h1>
+            <h1>EJS Cats</h1>
+            <p>
+                The lion (Panthera leo) is a species in the family Felidae, and a member of
+                the genus Panthera. It exhibits a pronounced sexual dimorphism; males are larger
+                than females with a typical weight range of 150 to 250 kg (331 to 551 lb) for the
+                former and 120 to 182 kg (265 to 401 lb) for the latter. In addition, male lions
+                have a prominent mane, which is the most recognisable feature of the species. Both
+                sexes have hairy tufts at the end of their tails.
+                Present in Africa and India, the lion typically inhabits grasslands and savannahs,
+                but is absent in dense forests. It is usually more diurnal than other big cats,
+                but when persecuted adapts to being active at night and at twilight. A lion pride
+                consists of a few adult males, related females and cubs. Prides vary in size and
+                composition from three to 20 adult lions, depending on habitat and prey availability.
+                Females cooperate when hunting and prey mostly on large ungulates, including antelope,
+                deer, buffalo, zebra and even giraffe.
+            </p>
+
+            <h3>Funny Lion</h3>
+            <a href='/funnyLion'><img src="/images/bigCat1.png" alt="img of lion"></a>
+            <h3>Mean Lion</h3>
+            <a href='/meanLion'><img src="/images/bigCat2.png" alt="img of lion"></a>
+            <h3>Majestic Lion</h3>
+            <a href='/confidentLion'><img src="/images/bigCat3.png" alt="img of lion"></a>
+
+        <% } %>
+
+
+        <% if (cat[0] && cat[0].temperment == 'funny') { %>
+            <h3>Funny Lion</h3>
+            <img src="/images/bigCat1.png" alt="img of lion">
+
+            <h1><%=cat[0].name%>'s profile</h1>
+            <h3>Name: <%=cat[0].name%></h3>
+            <h3>Age: <%=cat[0].age%></h3>
+            <h3>Favorite Food: <%=cat[0].favoriteFood%></h3>
+            <h3>Hobby: <%=cat[0].hobby%></h3>
+        <% } %>
+
+        <% if (cat[0] && cat[0].temperment == 'mean') { %>
+            <h3>Mean Lion</h3>
+            <img src="/images/bigCat2.png" alt="img of lion">
+
+            <h1><%=cat[0].name%>'s profile</h1>
+            <h3>Name: <%=cat[0].name%></h3>
+            <h3>Age: <%=cat[0].age%></h3>
+            <h3>Favorite Food: <%=cat[0].favoriteFood%></h3>
+            <h3>Hobby: <%=cat[0].hobby%></h3>
+        <% } %>
+
+        <% if (cat[0] && cat[0].temperment == 'confident') { %>
+            <h3>Majestic Lion</h3>
+           <img src="/images/bigCat3.png" alt="img of lion">
+
+            <h1><%=cat[0].name%>'s profile</h1>
+            <h3>Name: <%=cat[0].name%></h3>
+            <h3>Age: <%=cat[0].age%></h3>
+            <h3>Favorite Food: <%=cat[0].favoriteFood%></h3>
+            <h3>Hobby: <%=cat[0].hobby%></h3>
+        <% } %>
+    </body>
+</html>

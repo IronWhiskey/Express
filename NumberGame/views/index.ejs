@@ -1,0 +1,31 @@
+<html>
+<head>
+</head>
+<body>
+    <div id='wrapper'>
+
+        <h1>Welcome to the Great Number Game!</h1>
+        <p>I am thinking of a number between 1 and 100</p>
+        <p>Take a guess!</p>
+
+        <% if (data.guess != 'undefined' && data.guess < data.random) { %>
+            <h3>Too low!</h3>
+        <% } %>
+
+        <% if (data.guess != 'undefined' && data.guess > data.random) { %>
+            <h3>Too high!</h3>
+        <% } %>
+
+        <% if (data.guess != 'undefined' && data.guess == data.random) { %>
+            <h3>You got it!</h3>
+        <% } %>
+
+        <form action='/guess' method='post'>
+                <input type='text' name='num'>
+                <input type='submit' id='submit' value='Submit' class='buttons'>
+        </form>
+
+    </div>    
+
+</body>
+</html>
